@@ -5,7 +5,7 @@ import Logo from '@components/logo'
 const config: DocsThemeConfig = {
   logo: <><Logo/><strong>Lineare Algebra</strong></>,
   footer: {
-    text: '© 2023 - Nicolas',
+    text: 'Erstellt von Nicolas Gres',
   },
   search: {
     placeholder: 'Suchen ...',

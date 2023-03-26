@@ -1,0 +1,66 @@
+Arguments: 
+  /Users/nicolas/.nvm/versions/node/v19.3.0/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js
+
+PATH: 
+  /Users/nicolas/.nvm/versions/node/v19.3.0/bin:/opt/homebrew/opt/python/libexec/bin:/opt/homebrew/opt/node/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin:/Users/nicolas/.sdkman/candidates/java/current/bin:/Users/nicolas/.nvm/versions/node/v19.3.0/bin:/opt/homebrew/opt/python/libexec/bin:/opt/homebrew/opt/node/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/nicolas/.fig/bin:/Users/nicolas/.local/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  19.3.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/nicolas/Developer/kit.edu/kit-la/package.json: Expected double-quoted property name in JSON at position 861
+      at JSON.parse (<anonymous>)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:310:30)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "nextra-docs-template",
+    "version": "0.0.1",
+    "description": "Nextra docs template",
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/shuding/nextra-docs-template.git"
+    },
+    "author": "Shu Ding <g@shud.in>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/shuding/nextra-docs-template/issues"
+    },
+    "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+    "dependencies": {
+      "@flowershow/remark-embed": "^1.0.0",
+      "@flowershow/remark-wiki-link": "1.0.0",
+      "mermaid": "^10.0.2",
+      "next": "^13.0.6",
+      "nextra": "2.2.20",
+      "nextra-theme-docs": "^2.2.20",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "remark-callouts": "^2.0.0",
+      "remark-mermaid-nextra": "^0.0.4",
+    },
+    "devDependencies": {
+      "@types/node": "18.11.10",
+      "typescript": "^4.9.3"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,0 +1,11 @@
+.callout, .blockquote {
+    margin-top: 0.5rem;
+}
+
+.callout-title {
+    border-radius: 2px;
+}
+
+.callout-content {
+    overflow: scroll;
+}

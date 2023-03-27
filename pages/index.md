@@ -21,8 +21,7 @@ Die Inhalten wurden in [Obsidian](https://obsidian.md/) verfasst und mit [nextra
 Da nextra nicht alle Obsidian-Markdown-Features unterstützt, kann es zu einigen Anzeigefehlern kommen,.
 
 Bekannte Bugs sind:
-- einige Links funktionieren nicht
+- Eingebettete Seiten funktionieren nicht
 - Collapsible Callouts können nicht eingeklappt werden (stattdessen wird nur ein Punkt links vom Beispiel angezeigt)
 - [Highlights](https://help.obsidian.md/How+to/Format+your+notes#Highlighting) werden nicht gerendert (z.B. ==markierter Text==)
 - Bilder werden immer auf maximaler Größe dargestellt
-- Gleichungen werden nicht zentriert

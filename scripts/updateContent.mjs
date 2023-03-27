@@ -9,7 +9,18 @@ const CONTENT_PATH = '/Users/nicolas/Library/Mobile Documents/iCloud~md~obsidian
 const PAGES_PATH = path.join(process.cwd(), 'pages');
 
 const meta = {
-    index: 'Start',
+    index: {
+        title: 'Home',
+        theme: {
+            breadcrumb: false,
+            toc: false,
+            pagination: false,
+            typesetting: 'article'
+        }
+    },
+    '---': {
+        type: 'separator'
+    },
 };
 
 async function updateContent(filePath) {
@@ -19,11 +30,15 @@ async function updateContent(filePath) {
         if (!(await exists(dest))) {
             await fs.mkdir(dest, { recursive: true });
         }
-        if (path.basename(dest) != 'pages') {
-            meta[path.basename(dest)] = path.basename(filePath);
-        }
         const files = await fs.readdir(filePath);
-        await Promise.all(files.map(file => updateContent(path.join(filePath, file))));
+        await Promise.all(files.map(async (file) => {
+            const subFilePath = path.join(filePath, file);
+            const stat = await fs.lstat(subFilePath);
+            if (stat.isDirectory()) {
+                meta[normalizeURL(file)] = path.basename(file);
+            }
+            await updateContent(subFilePath);
+        }));
         return;
     }
 
@@ -60,7 +75,7 @@ async function exists(filePath) {
 
 async function exec() {
     await updateContent(CONTENT_PATH);
-    await fs.writeFile(path.join(PAGES_PATH, '_meta.json'), JSON.stringify(meta), 'utf8');
+    await fs.writeFile(path.join(PAGES_PATH, '_meta.json'), JSON.stringify(meta, null, 2), 'utf8');
 }
 
 exec();

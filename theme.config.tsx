@@ -13,14 +13,11 @@ const config: DocsThemeConfig = {
   feedback: {
     content: null
   },
-  editLink: {
-    component: null
-  },
   toc: {
     title: 'Inhalt'
   },
   sidebar: {
-    defaultMenuCollapseLevel: 1,
+    defaultMenuCollapseLevel: 2,
   },
   head: (
     <>

@@ -44,7 +44,7 @@ async function insertTitle(filePath, title) {
 
   frontMatter.title = title;
 
-  const newContent = `---\n${stringify(frontMatter)}---\n\n# ${title.split(/\d+.\d+ /).pop()}\n\n${content}`;
+  const newContent = `---\n${stringify(frontMatter)}---\n\n${content}`;
 
   await fs.writeFile(filePath, newContent);
 }

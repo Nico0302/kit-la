@@ -19,9 +19,27 @@ const config: DocsThemeConfig = {
   toc: {
     title: 'Inhalt'
   },
+  sidebar: {
+    defaultMenuCollapseLevel: 1,
+  },
+  head: (
+    <>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+    </>
+  ),
   useNextSeoProps() {
     return {
-      titleTemplate: '%s – LA1'
+      titleTemplate: '%s – LA1',
+      description: 'Mitschriften zu LA1',
+      openGraph: {
+          type: 'website',
+          locale: 'de_DE',
+          url: 'https://la-kit.vercel.app/',
+          siteName: 'LA1',
+      }
     }
   }
 }

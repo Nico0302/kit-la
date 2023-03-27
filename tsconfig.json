@@ -20,6 +20,6 @@
       "@utils/*": ["./utils/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/normalizeURL.mjs"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "utils/normalizeURL.mjs", "pages/_app.mdx"],
   "exclude": ["node_modules"]
 }

@@ -2,7 +2,7 @@ const COMBINING = /[\u0300-\u036F]/g;
 
 export function normalizeURL(url) {
   
-  return url.replace(/\s/g, '-').toLowerCase().normalize('NFKD').replace(COMBINING, '');
+  return url.replace(/\s/g, '-').replace('ß', 'ss').toLowerCase().normalize('NFKD').replace(COMBINING, '');
 }
 
 export function pageResolver(name) {
@@ -12,7 +12,7 @@ export function pageResolver(name) {
         [, heading] = name.split("#");
         name = name.replace(`#${heading}`, "");
     }
-    return image ? [name] : [normalizeURL(name.replace('Module/LA1', ''))];
+    return image ? [`assets/${name}`] : [normalizeURL(name.replace('Module/LA1', ''))];
 }
 
 function wikiLinkTransclusionFormat(extension) {
